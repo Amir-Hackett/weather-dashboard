@@ -1,5 +1,5 @@
-var btnClickHandler = document.querySelector(".btn")
-var weatherContainer = document.querySelector("#weather-container")
+var cityFormEl = document.querySelector("#city-search-form")
+var weatherContainer = document.querySelector("#current-weather-container")
 
 function cityFetch(){
    var apiCity = "https://api.openweathermap.org/data/2.5/weather?q=orlando&appid=b82992c00ffe5866266f560867525932"
@@ -28,7 +28,7 @@ function displayCity(lat, lon){
                         var condCard = document.createElement("img")
                         condCard.setAttribute("src", `https://openweathermap.org/img/w/${response.daily[i].weather[0].icon}.png`)
                         var tempCard = document.createElement("div")
-                        tempCard.textContent
+                        tempCard.textContent 
                         var windCard = document.createElement("div")
                         windCard.textContent
                         var humidCard = document.createElement("div")
@@ -37,17 +37,12 @@ function displayCity(lat, lon){
                         card.setAttribute("class", "card")
                         card.append(dateCard, condCard, tempCard, windCard, humidCard)
                         weatherContainer.append(card)
-
+                        console.log(response)
                     }
                 })
             }
         })
-}
+    }
 
 
-
-
-function btnClickHandler(event){
-
-}
 cityFetch()
