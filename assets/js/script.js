@@ -7,7 +7,7 @@ var forecastTitle = document.querySelector("#forecast")
 var forecastContainerEl = document.querySelector("#five-day-container")
 var pastSearchButtonEl = document.querySelector("#past-search-button")
 
-function formSumbitHandler(event){
+function formSubmitHandler(event){
     event.preventDefault()
     var city = cityInputEl.value.trim()
     if(city){
@@ -114,9 +114,7 @@ function displayWeather(weather, searchCity){
     var lat = weather.coord.lat
     var lon = weather.coord.lon
     getUvIndex(lat,lon)
- }
-
-
+}
 
 function get5Day(city){
     var apiKey = "b82992c00ffe5866266f560867525932"
@@ -138,7 +136,6 @@ function display5Day(weather){
         for(var i=5; i < forecast.length; i=i+8){
        var dailyForecast = forecast[i]
         
-       
        var forecastEl=document.createElement("div")
        forecastEl.classList = "card bg-primary text-light m-2"
 
@@ -148,7 +145,6 @@ function display5Day(weather){
        forecastDate.classList = "card-header text-center"
        forecastEl.appendChild(forecastDate)
 
-       
        //create an image element
        var weatherIcon = document.createElement("img")
        weatherIcon.classList = "card-body text-center"
@@ -162,8 +158,8 @@ function display5Day(weather){
        forecastTempEl.classList = "card-body text-center"
        forecastTempEl.textContent = dailyForecast.main.temp + " °F"
 
-        //append to forecast card
-        forecastEl.appendChild(forecastTempEl)
+       //append to forecast card
+       forecastEl.appendChild(forecastTempEl)
 
        var forecastHumEl=document.createElement("span")
        forecastHumEl.classList = "card-body text-center"
@@ -175,7 +171,6 @@ function display5Day(weather){
        //append to five day container
         forecastContainerEl.appendChild(forecastEl)
     }
-
 }
 
 function pastSearch(pastSearch){
@@ -197,5 +192,5 @@ function pastSearchHandler(event){
     }
 }
 
-cityFormEl.addEventListener("submit", formSumbitHandler)
+cityFormEl.addEventListener("submit", formSubmitHandler)
 pastSearchButtonEl.addEventListener("click", pastSearchHandler)

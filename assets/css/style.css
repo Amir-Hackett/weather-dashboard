@@ -10,10 +10,6 @@
     flex:auto
 }
 
-.five-day-container{
-   flex: auto;
-}
-
 span.severe{
     padding: 3px;
     background-color: red;
