@@ -17,11 +17,11 @@ Previous searches are saved in localStorage and the five (5) most recent searche
 * Bootstrap 
 * Moment.js 
 
-## Website URL
-
+## URL
+https://amir-hackett.github.io/weather-dashboard/
 
 ## Mock Up
-<!--![recording of index.html](./assets/Screen-Recording.gif)-->
+![recording of index.html](./assets/screen-record.gif)
 
 ## Contribution
 Amir Hackett ©2022

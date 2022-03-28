@@ -12,7 +12,7 @@ function formSubmitHandler(event){
     var city = cityInputEl.value.trim()
     if(city){
         getCityWeather(city)
-        get5Day(city)
+        getCity(city)
         cities.unshift({city})
         cityInputEl.value = ""
     } else{
@@ -102,13 +102,9 @@ function displayWeather(weather, searchCity){
     windSpeedEl.textContent = "Wind Speed: " + weather.wind.speed + " MPH"
     windSpeedEl.classList = "list-group-item"
  
-    //append to container
+    //appends elements to container
     weatherContainerEl.appendChild(temperatureEl)
- 
-    //append to container
     weatherContainerEl.appendChild(humidityEl)
- 
-    //append to container
     weatherContainerEl.appendChild(windSpeedEl)
  
     var lat = weather.coord.lat
@@ -116,7 +112,7 @@ function displayWeather(weather, searchCity){
     getUvIndex(lat,lon)
 }
 
-function get5Day(city){
+function getCity(city){
     var apiKey = "b82992c00ffe5866266f560867525932"
     var apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
 
@@ -188,7 +184,7 @@ function pastSearchHandler(event){
     var city = event.target.getAttribute("data-city")
     if(city){
         getCityWeather(city)
-        get5Day(city)
+        getCity(city)
     }
 }
 
