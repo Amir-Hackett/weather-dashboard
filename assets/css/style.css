@@ -1,0 +1,56 @@
+.search-column{
+    background-color:	#D3D3D3;
+}
+
+.list-group-item{
+    line-height: 0.5;
+    border: none;
+}
+.card-body{
+    flex:auto
+}
+
+.five-day-container{
+   flex: auto;
+}
+
+span.severe{
+    padding: 3px;
+    background-color: red;
+    color:white;
+}
+
+span.moderate{
+    padding: 3px;
+    background-color: yellow;
+}
+
+span.favorable{
+    padding: 3px;
+    background-color: green;
+    color:white;
+}
+
+
+/* Applies for screens 768px and bellow */
+@media screen and (max-width: 768px), screen and (max-width: 575px) {
+    .search-column {
+      height: auto;
+      margin-top: 20px;
+    }
+  
+    .list-group-item {
+      padding-right: 17%;
+    }
+  
+    .card-body {
+      border: 0;
+      border-radius: 0.25rem;
+      height: 50px;
+    }
+  
+    span, img, .container-fluid{
+      min-height: 85px;
+      border: 0;
+    }
+  }
