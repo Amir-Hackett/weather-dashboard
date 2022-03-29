@@ -57,12 +57,12 @@ function displayUvIndex(index){
     uvIndexValue = document.createElement("span")
     uvIndexValue.textContent = index.value
 
-    if(index.value <=2){
+    if(index.value <= 2){
         uvIndexValue.classList = "favorable"
-    }else if(index.value >2 && index.value<=8){
+    }else if(index.value > 2 && index.value <= 8){
         uvIndexValue.classList = "moderate "
     }
-    else if(index.value >8){
+    else if(index.value > 8){
         uvIndexValue.classList = "severe"
     }
 
