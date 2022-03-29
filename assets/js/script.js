@@ -152,15 +152,22 @@ function display5Day(weather){
        //create temperature span
        var forecastTempEl=document.createElement("span")
        forecastTempEl.classList = "card-body text-center"
-       forecastTempEl.textContent = dailyForecast.main.temp + " °F"
-
+       forecastTempEl.textContent = "Temp: " + dailyForecast.main.temp + " °F"
+        
        //append to forecast card
        forecastEl.appendChild(forecastTempEl)
+         
+      //create a span element to hold Wind data
+        var forecastWindEl = document.createElement("span")
+        forecastWindEl.classList = "card-body text-center"
+        forecastWindEl.textContent = "Wind Speed: " + dailyForecast.wind.speed + " MPH"
+        
+        forecastEl.appendChild(forecastWindEl)
 
        var forecastHumEl=document.createElement("span")
        forecastHumEl.classList = "card-body text-center"
-       forecastHumEl.textContent = dailyForecast.main.humidity + "  %"
-
+       forecastHumEl.textContent = "Humidity: " + dailyForecast.main.humidity + "  %"
+ 
        //append to forecast card
        forecastEl.appendChild(forecastHumEl)
 
