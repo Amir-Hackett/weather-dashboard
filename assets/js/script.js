@@ -160,7 +160,7 @@ function display5Day(weather){
       //create a span element to hold Wind data
         var forecastWindEl = document.createElement("span")
         forecastWindEl.classList = "card-body text-center"
-        forecastWindEl.textContent = "Wind Speed: " + dailyForecast.wind.speed + " MPH"
+        forecastWindEl.textContent = "Wind : " + dailyForecast.wind.speed + " MPH"
         
         forecastEl.appendChild(forecastWindEl)
 
