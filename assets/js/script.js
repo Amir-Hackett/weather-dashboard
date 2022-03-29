@@ -170,7 +170,6 @@ function display5Day(weather){
 }
 
 function pastSearch(pastSearch){
-
     pastSearchEl = document.createElement("button")
     pastSearchEl.textContent = pastSearch
     pastSearchEl.classList = "d-flex w-100 btn-light border p-2"
