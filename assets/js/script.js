@@ -1,3 +1,4 @@
+var cities = []
 var cityFormEl=document.querySelector("#city-search-form")
 var cityInputEl=document.querySelector("#city")
 var weatherContainerEl=document.querySelector("#current-weather-container")
